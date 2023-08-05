@@ -1,7 +1,7 @@
 var url = ("https://animechan.vercel.app/api/quotes/anime?title=naruto")
 
 async function reqFetch() {
-    var urlFetch = await fetch(url)
+    var urlFetch = await fetch(url,{mode:'no-cors'})
     var urlData = await urlFetch.json()
     urlData.map((ele) => {
         var parent = document.querySelector('.imageBox')
